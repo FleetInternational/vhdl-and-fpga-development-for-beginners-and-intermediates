@@ -1,0 +1,5 @@
+*
+!*.vhd
+!*.xdc
+!README.md
+!.gitignore
