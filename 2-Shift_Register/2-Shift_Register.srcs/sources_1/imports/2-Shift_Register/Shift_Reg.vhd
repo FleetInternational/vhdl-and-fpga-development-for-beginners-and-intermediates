@@ -47,13 +47,13 @@ begin
 	A <= A_reg;
 	B <= B_reg;
 	C <= C_reg;
-	D <= ?;		-- Determine this value
+	D <= D_reg;
 	
 	-- Process that is used to shift values
 	--  		** HINT **
 	-- (We want this process to be evaluated
 	-- on every clock cycle) Remember sensitivity lists?
-	reg_process: process(?)
+	reg_process: process(clk)
 	begin
 		if(rising_edge(clk)) then
 			if(reset = '1') then
@@ -66,10 +66,10 @@ begin
 				-- This is where the shifting actually occurs
 				-- depending on how you code this, you can have
 				-- a shift right or shift left register
-				A_reg <= ?;
-				B_reg <= ?;
-				C_reg <= ?;
-				D_reg <= ?;
+				A_reg <= data_in;
+				B_reg <= A_reg;
+				C_reg <= B_reg;
+				D_reg <= C_reg;
 			end if;
 		end if;
 	end process reg_process;
