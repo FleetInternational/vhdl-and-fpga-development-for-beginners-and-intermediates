@@ -2,5 +2,6 @@
 !*/
 !*.vhd
 !*.xdc
+!*constraints_summary.txt
 !README.md
 !.gitignore
