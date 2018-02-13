@@ -66,14 +66,14 @@ begin
 						A_reg(data_width - 1) <= '0';
 						
 						-- Use the left shift as a reference
-						A_reg(data_width - 2 downto 0) <= A_reg(data_width - 1 downto 1);
+						A_reg(data_width - 2 downto 0) <= A_reg(data_width-1 downto 1);
 						
 					when "10" => -- Left shift
 						A_reg(data_width - 1 downto 1) <= A_reg(data_width - 2 downto 0);
 						A_reg(0) <= '0';
 						
 					when "11" => -- Parallel Load
-						A_reg <= I(data_width - 1 downto 0);
+						A_reg <= I;
 						
 					when others => -- Error code
 						A_reg <= (others => 'X');

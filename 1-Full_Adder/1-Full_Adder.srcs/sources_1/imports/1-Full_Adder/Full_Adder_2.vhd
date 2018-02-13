@@ -27,7 +27,7 @@ architecture behavior of Full_Adder_2 is
 signal inputs	: std_logic_vector(2 downto 0);
 signal outputs	: std_logic_vector(1 downto 0);
 
--- Begin statement goes after signals are defined
+-- Begin statement goes after signals are define
 -- and after components are instantiated. Note that
 -- we are not instantiating any signals in this design
 begin
